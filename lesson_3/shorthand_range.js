@@ -50,11 +50,19 @@ function expandRange(start, end) {
 function nextNum(lastNum, next) {
   if (lastNum === undefined) return Number(next);
 
-  while (true) {
-    if (String(++lastNum).slice(-next.length) === next) {
-      return lastNum;
-    }
+  let significant = next;
+  let insignificant = String(lastNum).slice(0, -next.length);
+
+  for (let num = Number(insignificant); ; num++) {
+    let nextNum = Number(String(num) + significant);
+    if (nextNum > lastNum) return nextNum;
   }
+
+  // while (true) {
+  //   if (String(++lastNum).slice(-next.length) === next) {
+  //     return lastNum;
+  //   }
+  // }
 }
 
 function last(arr) {

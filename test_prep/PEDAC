@@ -1,0 +1,62 @@
+/*
+Description:
+
+
+CLARIFICATIONS:
+  INPUT 
+  - Data type(s)
+    - primitives: string, boolean, number, null (typeof = obj), undefined
+    - non-primitives: objects, arrays, function, regexp, etc 
+  VALUES
+  - Normal: string, boolean, number, null, undefined, collection
+  - Special Numbers: NaN, +/-Infinity, float, 0, negative 
+  - Other: sparse array[1,,3], [1, 2, a: 'A'] object properties within array
+  EDGE CASES:
+  - Invalid Input (data types)
+  - Emptiness (null, '', [], {})
+  - Boundary conditions (max 20 chars & add in 21 chars)
+  - Repetition/duplication
+  - Uppercase/Lowercase strings/chars
+  - Too few/many args; default param values
+  - mixture of data types
+  RETURN VALUE(s): 
+  - same or new object 
+  - same or different data types
+  - duplicates
+  - order
+  FAILURES/BAD INPUT:
+  - Return a special value (null, '', [], {})
+  - Raise exceptions or report errors
+
+Problem Definition:
+  - input:
+  - output:
+  - rules/model:
+    -
+
+Examples / Test Cases:
+
+
+Data Structure:
+  - input:
+  - rules:
+    -
+
+Algorithm:
+  - Guard clauses
+*/
+
+NOTES:
+Test cases: you want to ask about 4 specific types of questions so you can narrow your test cases down.
+1. Input types -> Every type -> Primitives and Objects doubler(function () {});               // "Invalid input"
+
+2. Happy Path Inputs - > String('a'), Number(1)
+
+3. Special values -> '1%$^' '\n', Number -> Infinity, NaN
+
+4. Invalid inputs -> function, boolean -> 'Invalid input'
+
+On problem Solving 
+1. What is my actual question
+2. What are my test cases
+3. ** How do i separate my problem into smaller problems**
